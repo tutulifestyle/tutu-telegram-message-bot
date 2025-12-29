@@ -2,7 +2,32 @@
 
 A simple Telegram private message forwarding bot. Users send messages to the bot, and the admin receives notifications and can reply directly.
 
-一个简洁的 Telegram 私信留言转发机器人，用户给 Bot 发消息，管理员收到通知并可直接回复。
+用Claude Code对话开发的Telegram留言机器人，用户发消息给Bot，管理员收到通知并可一键回复，支持Docker一键部署。
+
+————————————
+
+简单教程
+
+1. 申请 Telegram Bot
+
+Telegram 搜索 @BotFather → 发送 /newbot
+按提示设置名称，获取 Token
+搜索 @userinfobot → 发任意消息，获取你的 ID
+
+2. 部署到 VPS
+
+# 下载项目
+git clone https://github.com/你的用户名/telegram-message-bot.git
+cd telegram-message-bot
+
+# 配置
+cp .env.example .env
+nano .env  # 填入 BOT_TOKEN 和 ADMIN_ID
+
+# 启动
+docker-compose up -d
+
+————————————
 
 ## Features / 功能特性
 
